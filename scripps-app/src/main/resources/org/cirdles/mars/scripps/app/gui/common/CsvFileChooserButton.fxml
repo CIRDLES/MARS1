@@ -1,0 +1,14 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Text?>
+
+<fx:root xmlns:fx="http://javafx.com/fxml"
+         type="org.cirdles.mars.scripps.app.gui.common.CsvFileChooserButton"
+         alignment="CENTER"
+         spacing="10">
+
+    <Text fx:id="fileNameText" text="No File Selected"/>
+
+    <Button fx:id="button"
+            onAction="#showFileChooser"
+            text="Choose File"/>
+</fx:root>

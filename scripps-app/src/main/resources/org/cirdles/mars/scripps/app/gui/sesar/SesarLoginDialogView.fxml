@@ -1,0 +1,48 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import org.cirdles.mars.scripps.app.gui.sesar.SesarLoginDialogView?>
+
+<?import javafx.scene.text.Text?>
+<fx:root xmlns:fx="http://javafx.com/fxml"
+         type="org.cirdles.mars.scripps.app.gui.sesar.SesarLoginDialogView"
+         alignment="CENTER"
+         vgap="10"
+         hgap="10"
+         prefWidth="300"
+         prefHeight="200">
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <Text GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="2">
+        Enter credentials and a registered user code for SESAR.
+    </Text>
+
+    <Label GridPane.rowIndex="1" GridPane.columnIndex="0"
+           labelFor="$usernameField">
+        Username:
+    </Label>
+
+    <TextField GridPane.rowIndex="1" GridPane.columnIndex="1"
+               fx:id="usernameField"/>
+
+    <Label GridPane.rowIndex="2" GridPane.columnIndex="0"
+           labelFor="$passwordField">
+        Password:
+    </Label>
+
+    <PasswordField GridPane.rowIndex="2" GridPane.columnIndex="1"
+                   fx:id="passwordField"/>
+
+    <Label GridPane.rowIndex="3" GridPane.columnIndex="0"
+           labelFor="$userCodeField">
+        User Code:
+    </Label>
+
+    <TextField GridPane.rowIndex="3" GridPane.columnIndex="1"
+               fx:id="userCodeField"/>
+</fx:root>

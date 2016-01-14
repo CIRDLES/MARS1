@@ -1,0 +1,6 @@
+dependencies {
+    compile project(':api')
+    compile 'org.glassfish.jersey.core:jersey-client:2.22.1'
+
+    testCompile 'com.github.tomakehurst:wiremock:1.57'
+}

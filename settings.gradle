@@ -1,0 +1,6 @@
+rootProject.name = 'mars'
+include 'api'
+include 'scripps'
+include 'scripps-app'
+include 'sesar'
+

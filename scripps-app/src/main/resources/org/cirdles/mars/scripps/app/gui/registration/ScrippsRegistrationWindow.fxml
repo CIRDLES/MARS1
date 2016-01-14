@@ -1,0 +1,12 @@
+<?import javafx.scene.control.Button?>
+<?import org.cirdles.mars.scripps.app.gui.common.ScrippsMenuBar?>
+
+<fx:root xmlns:fx="http://javafx.com/fxml"
+         type="org.cirdles.mars.scripps.app.gui.registration.ScrippsRegistrationWindow"
+         prefWidth="800"
+         prefHeight="600">
+
+    <ScrippsMenuBar/>
+
+    <Button onAction="#registerSamples">Register Samples</Button>
+</fx:root>

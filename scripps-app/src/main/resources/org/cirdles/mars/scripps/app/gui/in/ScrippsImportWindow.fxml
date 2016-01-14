@@ -1,0 +1,66 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import org.cirdles.mars.scripps.app.gui.common.CsvFileChooserButton?>
+<?import org.cirdles.mars.scripps.app.gui.common.ScrippsMenuBar?>
+<?import org.cirdles.mars.scripps.app.gui.in.ScrippsImportWindow?>
+
+<fx:root xmlns:fx="http://javafx.com/fxml"
+         type="org.cirdles.mars.scripps.app.gui.in.ScrippsImportWindow"
+         prefWidth="800"
+         prefHeight="600">
+
+    <ScrippsMenuBar/>
+
+    <GridPane hgap="10" vgap="10"
+              VBox.vgrow="ALWAYS">
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+        </padding>
+
+        <Label GridPane.rowIndex="0" GridPane.columnIndex="0"
+               style="-fx-font-weight: bold">
+            Core Samples CSV
+        </Label>
+
+        <CsvFileChooserButton
+                fx:id="coreSamplesCsv"
+                GridPane.rowIndex="0" GridPane.columnIndex="1"
+                alignment="CENTER_RIGHT"/>
+
+        <Label GridPane.rowIndex="1" GridPane.columnIndex="0"
+               style="-fx-font-weight: bold">
+            Core Intervals CSV
+        </Label>
+
+        <CsvFileChooserButton
+                fx:id="coreIntervalsCsv"
+                GridPane.rowIndex="1" GridPane.columnIndex="1"
+                alignment="CENTER_RIGHT"/>
+
+        <Text GridPane.rowIndex="2" GridPane.columnIndex="0"
+              fx:id="selectSamplesText"
+              GridPane.valignment="BOTTOM">
+            Select core samples CSV to continue.
+        </Text>
+
+        <Text GridPane.rowIndex="2" GridPane.columnIndex="0"
+              fx:id="selectIntervalsText"
+              GridPane.valignment="BOTTOM">
+            Select core intervals CSV to continue.
+        </Text>
+
+        <Button fx:id="continueButton"
+                GridPane.rowIndex="2"
+                GridPane.columnIndex="1"
+                GridPane.halignment="RIGHT"
+                GridPane.hgrow="ALWAYS"
+                GridPane.valignment="BOTTOM"
+                GridPane.vgrow="ALWAYS"
+                onAction="#continueToVerification"
+                text="Continue"/>
+    </GridPane>
+</fx:root>

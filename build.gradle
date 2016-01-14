@@ -1,0 +1,21 @@
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'maven'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories {
+        jcenter()
+
+        maven {
+            url 'https://jitpack.io'
+        }
+    }
+
+    dependencies {
+        testCompile 'org.assertj:assertj-core:3.2.0'
+        testCompile 'org.mockito:mockito-core:2.0.31-beta'
+        testCompile 'junit:junit:4.12'
+    }
+}
