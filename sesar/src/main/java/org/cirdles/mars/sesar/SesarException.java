@@ -1,4 +1,4 @@
-package org.cirdles.mars.cesar;
+package org.cirdles.mars.sesar;
 
 import org.cirdles.mars.api.MarsException;
 

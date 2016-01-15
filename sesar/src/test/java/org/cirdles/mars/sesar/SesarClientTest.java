@@ -1,9 +1,9 @@
-package org.cirdles.mars.cesar;
+package org.cirdles.mars.sesar;
 
 import com.github.tomakehurst.wiremock.junit.WireMockRule;
 import org.cirdles.mars.api.SampleRegistryClient;
 import org.cirdles.mars.api.SampleSource;
-import org.cirdles.mars.cesar.jaxb.Samples;
+import org.cirdles.mars.sesar.jaxb.Samples;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;

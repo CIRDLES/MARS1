@@ -6,7 +6,7 @@
 //
 
 
-package org.cirdles.mars.cesar.jaxb;
+package org.cirdles.mars.sesar.jaxb;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
