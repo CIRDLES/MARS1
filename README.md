@@ -1,6 +1,8 @@
 MARS
 ====
 
+[![Build Status](https://travis-ci.org/CIRDLES/MARS.svg?branch=master)](https://travis-ci.org/CIRDLES/MARS)
+
 Middleware for Assisting the Registration of Samples
 
 SESAR Documentation
