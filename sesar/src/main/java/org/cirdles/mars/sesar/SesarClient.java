@@ -15,6 +15,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import java.io.ByteArrayOutputStream;
 import java.io.UnsupportedEncodingException;
+import java.util.List;
 
 import static javax.ws.rs.client.Entity.form;
 import static org.glassfish.jersey.client.ClientProperties.CONNECT_TIMEOUT;
@@ -77,7 +78,7 @@ public class SesarClient implements SampleRegistryClient {
     }
 
     @Override
-    public void register(SampleSource sampleSource) {
+    public List<String> register(SampleSource sampleSource) {
         Samples samples = sampleMapper.translateToSesarSamples(sampleSource);
 
         String samplesXml;
@@ -109,6 +110,8 @@ public class SesarClient implements SampleRegistryClient {
             System.out.println("Success!");
             System.out.println(response.readEntity(String.class));
         }
+
+        return null;
     }
 
 }
