@@ -2,6 +2,7 @@ MARS
 ====
 
 [![Build Status](https://travis-ci.org/CIRDLES/MARS.svg?branch=master)](https://travis-ci.org/CIRDLES/MARS)
+[![Coverage Status](https://coveralls.io/repos/CIRDLES/MARS/badge.svg?branch=master&service=github)](https://coveralls.io/github/CIRDLES/MARS?branch=master)
 
 Middleware for Assisting the Registration of Samples
 

@@ -1,9 +1,10 @@
-subprojects {
-    apply plugin: 'java'
-    apply plugin: 'maven'
+plugins {
+    id 'com.github.kt3k.coveralls' version '2.4.0x'
+}
 
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'jacoco'
 
     repositories {
         jcenter()
@@ -12,10 +13,36 @@ subprojects {
             url 'https://jitpack.io'
         }
     }
+}
+
+subprojects {
+    apply plugin: 'maven'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
 
     dependencies {
         testCompile 'org.assertj:assertj-core:3.2.0'
         testCompile 'org.mockito:mockito-core:2.0.31-beta'
         testCompile 'junit:junit:4.12'
+    }
+}
+
+jacocoTestReport {
+    dependsOn test
+
+    sourceDirectories = files subprojects.sourceSets.main.allSource.srcDirs
+    classDirectories = files subprojects.sourceSets.main.output
+    executionData = files subprojects.jacocoTestReport.executionData
+
+    reports {
+        html.enabled true
+        xml.enabled true
+    }
+
+    onlyIf = { true }
+
+    doFirst {
+        executionData = files executionData.findAll { it.exists() }
     }
 }
