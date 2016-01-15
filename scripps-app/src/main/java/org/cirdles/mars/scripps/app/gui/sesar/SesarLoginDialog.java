@@ -2,7 +2,7 @@ package org.cirdles.mars.scripps.app.gui.sesar;
 
 import javafx.scene.control.Dialog;
 import org.cirdles.mars.api.SampleRegistryClient;
-import org.cirdles.mars.cesar.SesarClient;
+import org.cirdles.mars.sesar.SesarClient;
 
 import javax.inject.Inject;
 

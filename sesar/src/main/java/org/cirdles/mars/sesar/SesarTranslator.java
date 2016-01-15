@@ -1,9 +1,9 @@
-package org.cirdles.mars.cesar;
+package org.cirdles.mars.sesar;
 
 import org.cirdles.mars.api.Sample;
 import org.cirdles.mars.api.SampleSource;
-import org.cirdles.mars.cesar.jaxb.ObjectFactory;
-import org.cirdles.mars.cesar.jaxb.Samples;
+import org.cirdles.mars.sesar.jaxb.ObjectFactory;
+import org.cirdles.mars.sesar.jaxb.Samples;
 
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeConstants;
