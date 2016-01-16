@@ -46,3 +46,7 @@ jacocoTestReport {
         executionData = files executionData.findAll { it.exists() }
     }
 }
+
+coveralls {
+    sourceDirs = subprojects.sourceSets.main.allSource.srcDirs.flatten()
+}
