@@ -10,9 +10,11 @@ import java.time.LocalDate;
  */
 public class ScrippsSampleAdapter implements Sample {
 
+    private String archive;
     private String platformName;
     private String cruiseName;
     private String name;
+    private String collectionMethod;
     private LocalDate collectionBeginDate;
     private LocalDate collectionEndDate;
     private BigDecimal wgs84Latitude;
@@ -29,9 +31,13 @@ public class ScrippsSampleAdapter implements Sample {
     }
 
     private void copyFields(ScrippsSample scrippsSample) {
+        // TODO map facility code to facility name
+        archive = scrippsSample.getFacilityCode();
+
         platformName = scrippsSample.getPlatform();
         cruiseName = scrippsSample.getCruise();
         name = scrippsSample.getSample();
+        collectionMethod = scrippsSample.getDevice();
         collectionBeginDate = null;
         collectionEndDate = null;
         wgs84Latitude = null;
@@ -45,10 +51,21 @@ public class ScrippsSampleAdapter implements Sample {
     }
 
     @Override
+    public String getArchive() {
+        return archive;
+    }
+
+    @Override
+    public void setArchive(String archive) {
+        this.archive = archive;
+    }
+
+    @Override
     public String getPlatformName() {
         return platformName;
     }
 
+    @Override
     public void setPlatformName(String platformName) {
         this.platformName = platformName;
     }
@@ -58,6 +75,7 @@ public class ScrippsSampleAdapter implements Sample {
         return cruiseName;
     }
 
+    @Override
     public void setCruiseName(String cruiseName) {
         this.cruiseName = cruiseName;
     }
@@ -67,8 +85,19 @@ public class ScrippsSampleAdapter implements Sample {
         return name;
     }
 
+    @Override
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String getCollectionMethod() {
+        return collectionMethod;
+    }
+
+    @Override
+    public void setCollectionMethod(String collectionMethod) {
+        this.collectionMethod = collectionMethod;
     }
 
     @Override
@@ -76,6 +105,7 @@ public class ScrippsSampleAdapter implements Sample {
         return collectionBeginDate;
     }
 
+    @Override
     public void setCollectionBeginDate(LocalDate collectionBeginDate) {
         this.collectionBeginDate = collectionBeginDate;
     }
@@ -85,6 +115,7 @@ public class ScrippsSampleAdapter implements Sample {
         return collectionEndDate;
     }
 
+    @Override
     public void setCollectionEndDate(LocalDate collectionEndDate) {
         this.collectionEndDate = collectionEndDate;
     }
@@ -94,6 +125,7 @@ public class ScrippsSampleAdapter implements Sample {
         return wgs84Latitude;
     }
 
+    @Override
     public void setWgs84Latitude(BigDecimal wgs84Latitude) {
         this.wgs84Latitude = wgs84Latitude;
     }
@@ -103,6 +135,7 @@ public class ScrippsSampleAdapter implements Sample {
         return wgs84EndingLatitude;
     }
 
+    @Override
     public void setWgs84EndingLatitude(BigDecimal wgs84EndingLatitude) {
         this.wgs84EndingLatitude = wgs84EndingLatitude;
     }
@@ -112,6 +145,7 @@ public class ScrippsSampleAdapter implements Sample {
         return wgs84Longitude;
     }
 
+    @Override
     public void setWgs84Longitude(BigDecimal wgs84Longitude) {
         this.wgs84Longitude = wgs84Longitude;
     }
@@ -121,6 +155,7 @@ public class ScrippsSampleAdapter implements Sample {
         return wgs84EndingLongitude;
     }
 
+    @Override
     public void setWgs84EndingLongitude(BigDecimal wgs84EndingLongitude) {
         this.wgs84EndingLongitude = wgs84EndingLongitude;
     }
@@ -130,6 +165,7 @@ public class ScrippsSampleAdapter implements Sample {
         return elevation;
     }
 
+    @Override
     public void setElevation(BigDecimal elevation) {
         this.elevation = elevation;
     }
@@ -139,6 +175,7 @@ public class ScrippsSampleAdapter implements Sample {
         return endingElevation;
     }
 
+    @Override
     public void setEndingElevation(BigDecimal endingElevation) {
         this.endingElevation = endingElevation;
     }
@@ -148,6 +185,7 @@ public class ScrippsSampleAdapter implements Sample {
         return material;
     }
 
+    @Override
     public void setMaterial(String material) {
         this.material = material;
     }
@@ -157,8 +195,13 @@ public class ScrippsSampleAdapter implements Sample {
         return type;
     }
 
+    @Override
     public void setType(String type) {
         this.type = type;
     }
 
+    @Override
+    public boolean isMutable() {
+        return true;
+    }
 }
